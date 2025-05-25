@@ -1,0 +1,20 @@
+name: CI/CD Demo with Email
+
+on:
+  workflow_dispatch: # Allows manual triggering
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: 23f3000046@ds.study.iitm.ac.in - Setup step
+        run: echo "This step contains my email address in the name"
+        
+      - name: Run tests
+        run: echo "Running tests..."
